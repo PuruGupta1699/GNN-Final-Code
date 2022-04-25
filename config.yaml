@@ -1,0 +1,40 @@
+# Network architecture
+embed_hidden: 128
+enc_stacks: 3
+ff_hidden: 512
+enc_heads: 16
+query_hidden: 360
+att_hidden: 256
+crit_hidden: 256
+n_history: 4
+p_dropout: 0.1
+x_dim : 4
+y_dim : 3
+
+# Logging
+proj_name: "encode_attend_navigate"
+log_interval: 50
+
+# Training
+steps: 100
+batch_size: 128
+max_len: 12
+dimension: 12
+model_path: "model.pt"
+test: True
+test_steps: 10
+device: "cuda:0"
+prob_p: 0.5
+prob_q: 0.4
+num_negative_sample: 4
+max_len: 5
+walk_max_length: 5
+embedding_dim: 128
+num_epochs: 1000
+
+# Optimizer
+lr: 0.001
+lr_decay_rate: 0.96
+lr_decay_steps: 5000
+grad_clip: 1
+
