@@ -27,7 +27,6 @@ device: "cuda:0"
 prob_p: 0.5
 prob_q: 0.4
 num_negative_sample: 4
-max_len: 5
 walk_max_length: 5
 embedding_dim: 128
 num_epochs: 1000
