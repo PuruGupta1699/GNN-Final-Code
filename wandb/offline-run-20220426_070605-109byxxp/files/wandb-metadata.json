@@ -1,0 +1,22 @@
+{
+    "os": "Windows-10-10.0.19043-SP0",
+    "python": "3.9.6",
+    "heartbeatAt": "2022-04-26T01:36:09.970419",
+    "startedAt": "2022-04-26T01:36:05.858228",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\tulsy\\Desktop\\puru\\NOC-Mapping-Problem\\main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/PuruGupta1699/NOC-Mapping-Problem.git",
+        "commit": "42838588fff1cef8792a0b0b7d9819211a2c2e46"
+    },
+    "email": "tulsyan.parth0206@gmail.com",
+    "root": "C:/Users/tulsy/Desktop/puru/NOC-Mapping-Problem",
+    "host": "DESKTOP-5CF5JCH",
+    "username": "tulsy",
+    "executable": "C:\\Users\\tulsy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+}

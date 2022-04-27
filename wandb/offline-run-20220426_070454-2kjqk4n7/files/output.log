@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\main.py", line 81, in <module>
+    main()
+  File "C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\main.py", line 43, in main
+    trainer.run()
+  File "C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\trainer.py", line 129, in run
+    self.conf.num_walks,
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\omegaconf\dictconfig.py", line 353, in __getattr__
+    self._format_and_raise(
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\omegaconf\base.py", line 190, in _format_and_raise
+    format_and_raise(
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\omegaconf\_utils.py", line 818, in format_and_raise
+    _raise(ex, cause)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\omegaconf\_utils.py", line 716, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set end OC_CAUSE=1 for full backtrace
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\omegaconf\dictconfig.py", line 351, in __getattr__
+    return self._get_impl(key=key, default_value=_DEFAULT_MARKER_)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\omegaconf\dictconfig.py", line 438, in _get_impl
+    node = self._get_node(key=key, throw_on_missing_key=True)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\omegaconf\dictconfig.py", line 470, in _get_node
+    raise ConfigKeyError(f"Missing key {key}")
+omegaconf.errors.ConfigAttributeError: Missing key num_walks
+    full_key: num_walks
+    object_type=dict

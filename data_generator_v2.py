@@ -5,7 +5,6 @@ import math
 import pandas as pd
 import networkx as nx
 import random
-from tqdm import tqdm
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -123,12 +122,7 @@ class DataGenerator(object):
         for walk_iteration in range(num_walks):
             random.shuffle(nodes)
 
-            for node in tqdm(
-                nodes,
-                position=0,
-                leave=True,
-                desc=f"Random walks iteration {walk_iteration + 1} of {num_walks}",
-            ):
+            for node in nodes:
                 # Start the walk with a random node from the graph.
                 walk = [node]
                 # Randomly walk for num_steps.
@@ -154,12 +148,7 @@ class DataGenerator(object):
     def generate_examples(self,sequences, window_size, num_negative_samples, vocabulary_size):
         example_weights = defaultdict(int)
         # Iterate over all sequences (walks).
-        for sequence in tqdm(
-            sequences,
-            position=0,
-            leave=True,
-            desc=f"Generating postive and negative examples",
-        ):
+        for sequence in sequences:
             # Generate positive and negative skip-gram pairs for a sequence (walk).
             pairs, labels = keras.preprocessing.sequence.skipgrams(
                 sequence,
@@ -244,8 +233,9 @@ class DataGenerator(object):
                 optimizer=keras.optimizers.Adam(learning_rate),
                 loss=keras.losses.BinaryCrossentropy(from_logits=True),
             )
-        history = model.fit(dataset, epochs=num_epochs)
+        model.fit(dataset, epochs=num_epochs)
         A = model.get_layer("item_embeddings").get_weights()[0]
+        A=np.array(A)
         return A
     def train_batch(self, batch_size,prob_p,prob_q,num_negative_samples, max_length,num_walks,walk_max_length, dimension, x_dim, y_dim,embedding_dim,num_epochs): # Generate random batch for training procedure
         input_batch = []
@@ -276,6 +266,9 @@ class DataGenerator(object):
                 A[app.source[i]][app.target[i]]= app.weight[i]
             input_batch_org.append(A)
             A=self.getEmbeddings(num_walks,walk_max_length,G,embedding_dim,num_epochs,prob_p,prob_q,num_negative_samples)
+            if A.shape[0]!=size1:
+                temp=np.zeros((size1-A.shape[0],embedding_dim),dtype='float')
+                A=np.concatenate((A,temp),axis=0)
             input_batch.append(A)
         # A=np.zeros((size1,size1),dtype='float')
         # traffic1 = random.randint(0,2)

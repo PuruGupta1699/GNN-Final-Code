@@ -96,7 +96,7 @@ class Trainer():
         tour, critique, log_probs, _ = self.agent(data)
 
         # Compute reward
-        reward = reward_fn(data,data_org,tour, x_dim, batch_size)
+        reward = reward_fn(data_org,tour, x_dim, batch_size)
         reward = torch.Tensor(reward).to(self.device)
         # Compute losses for both actor (reinforce) and critic
         loss1 = ((reward - critique) * log_probs).mean()
@@ -134,8 +134,8 @@ class Trainer():
                 self.conf.embedding_dim,
                 self.conf.num_epochs
             )
-            input_batch = torch.Tensor(input_batch).to(self.device)
-            input_batch_org=torch.Tensor(input_batch_org).to(self.device)
+            input_batch = torch.Tensor(np.array(input_batch)).to(self.device)
+            input_batch_org=torch.Tensor(np.array(input_batch_org)).to(self.device)
 
             reward, losses = self.train_step(input_batch,input_batch_org,self.conf.x_dim, self.conf.batch_size)
 

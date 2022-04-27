@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\main.py", line 81, in <module>
+    main()
+  File "C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\main.py", line 42, in main
+    trainer = Trainer(conf, agent, dataset)
+  File "C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\trainer.py", line 85, in __init__
+    self.agent = self.agent.to(self.device)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 907, in to
+    return self._apply(convert)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 578, in _apply
+    module._apply(fn)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 578, in _apply
+    module._apply(fn)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 601, in _apply
+    param_applied = fn(param)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 905, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "C:\Users\tulsy\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\cuda\__init__.py", line 210, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled

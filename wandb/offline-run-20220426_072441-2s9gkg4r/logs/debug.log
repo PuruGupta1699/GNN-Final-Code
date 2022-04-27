@@ -1,0 +1,34 @@
+2022-04-26 07:24:41,542 INFO    MainThread:11332 [wandb_setup.py:_flush():75] Loading settings from C:\Users\tulsy\.config\wandb\settings
+2022-04-26 07:24:41,542 INFO    MainThread:11332 [wandb_setup.py:_flush():75] Loading settings from C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\wandb\settings
+2022-04-26 07:24:41,542 INFO    MainThread:11332 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-04-26 07:24:41,543 INFO    MainThread:11332 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': 'C:\\Users\\tulsy\\Desktop\\puru\\NOC-Mapping-Problem\\main.py'}
+2022-04-26 07:24:41,543 INFO    MainThread:11332 [wandb_setup.py:_flush():75] Applying login settings: {'mode': 'offline'}
+2022-04-26 07:24:41,546 INFO    MainThread:11332 [wandb_init.py:_log_setup():437] Logging user logs to C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\wandb\offline-run-20220426_072441-2s9gkg4r\logs\debug.log
+2022-04-26 07:24:41,546 INFO    MainThread:11332 [wandb_init.py:_log_setup():438] Logging internal logs to C:\Users\tulsy\Desktop\puru\NOC-Mapping-Problem\wandb\offline-run-20220426_072441-2s9gkg4r\logs\debug-internal.log
+2022-04-26 07:24:41,547 INFO    MainThread:11332 [wandb_init.py:init():471] calling init triggers
+2022-04-26 07:24:41,547 INFO    MainThread:11332 [wandb_init.py:init():474] wandb.init called with sweep_config: {}
+config: {'config': 'config.yaml', 'embed_hidden': 128, 'enc_stacks': 3, 'ff_hidden': 512, 'enc_heads': 16, 'query_hidden': 360, 'att_hidden': 256, 'crit_hidden': 256, 'n_history': 4, 'p_dropout': 0.1, 'x_dim': 4, 'y_dim': 3, 'proj_name': 'encode_attend_navigate', 'log_interval': 50, 'steps': 100, 'batch_size': 4, 'max_len': 12, 'dimension': 12, 'model_path': 'model.pt', 'test': True, 'test_steps': 10, 'device': 'cpu', 'prob_p': 0.5, 'prob_q': 0.4, 'num_walks': 100, 'num_negative_sample': 4, 'walk_max_length': 5, 'embedding_dim': 128, 'num_epochs': 10, 'lr': 0.001, 'lr_decay_rate': 0.96, 'lr_decay_steps': 5000, 'grad_clip': 1}
+2022-04-26 07:24:41,547 INFO    MainThread:11332 [wandb_init.py:init():524] starting backend
+2022-04-26 07:24:41,547 INFO    MainThread:11332 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-04-26 07:24:41,551 INFO    MainThread:11332 [backend.py:ensure_launched():217] starting backend process...
+2022-04-26 07:24:41,645 INFO    MainThread:11332 [backend.py:ensure_launched():222] started backend process with pid: 25864
+2022-04-26 07:24:41,646 INFO    MainThread:11332 [wandb_init.py:init():533] backend started and connected
+2022-04-26 07:24:41,648 INFO    MainThread:11332 [wandb_init.py:init():597] updated telemetry
+2022-04-26 07:24:41,725 INFO    MainThread:11332 [wandb_init.py:init():659] starting run threads in backend
+2022-04-26 07:24:45,894 INFO    MainThread:11332 [wandb_run.py:_console_start():1897] atexit reg
+2022-04-26 07:24:45,895 INFO    MainThread:11332 [wandb_run.py:_redirect():1770] redirect: SettingsConsole.WRAP
+2022-04-26 07:24:45,896 INFO    MainThread:11332 [wandb_run.py:_redirect():1807] Wrapping output streams.
+2022-04-26 07:24:45,903 INFO    MainThread:11332 [wandb_run.py:_redirect():1831] Redirects installed.
+2022-04-26 07:24:45,904 INFO    MainThread:11332 [wandb_init.py:init():684] run started, returning control to user process
+2022-04-26 07:24:45,917 INFO    MainThread:11332 [wandb_watch.py:watch():47] Watching
+2022-04-26 07:24:47,344 INFO    MainThread:11332 [wandb_run.py:_atexit_cleanup():1866] got exitcode: 1
+2022-04-26 07:24:47,345 INFO    MainThread:11332 [wandb_run.py:_restore():1838] restore
+2022-04-26 07:24:47,751 INFO    MainThread:11332 [wandb_run.py:_on_finish():1995] got exit ret: 
+2022-04-26 07:24:47,867 INFO    MainThread:11332 [wandb_run.py:_on_finish():1995] got exit ret: done: true
+exit_result {
+}
+local_info {
+}
+
+2022-04-26 07:24:49,397 INFO    MainThread:11332 [wandb_run.py:_footer_history_summary_info():3102] rendering history
+2022-04-26 07:24:49,397 INFO    MainThread:11332 [wandb_run.py:_footer_history_summary_info():3134] rendering summary
