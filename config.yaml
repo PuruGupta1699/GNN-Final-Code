@@ -30,7 +30,7 @@ num_walks: 100
 num_negative_sample: 4
 walk_max_length: 5
 embedding_dim: 128
-num_epochs: 50
+num_epochs: 10
 # Optimizer
 lr: 0.001
 lr_decay_rate: 0.96
